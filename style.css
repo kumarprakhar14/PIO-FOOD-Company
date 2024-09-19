@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    background-color: transparent; /* Make it semi-transparent */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10; /* Ensure it stays on top of the slider */
+}
+
+header img{
+    width: 70px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    align-items: flex-start;
+}
+
+.brand {
+    font-size: 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+.navigation-items a {
+    margin: 0 15px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: 300%; /* 3 images */
+    height: 100%;
+    transition: transform 1s ease; /* Smooth transition */
+}
+
+.slider img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.slider-nav a {
+    font-size: 1.2rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+    text-decoration: none;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+/* Highlight the active button */
+.slider-nav a.active {
+    background-color: #ff7f50; /* Change to any color you like */
+}
